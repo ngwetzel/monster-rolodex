@@ -1,7 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Component } from 'react';
 import CardList from './components/card-list/card-list.component.jsx';
+import SearchBox from './components/search-box/search-box.component.jsx';
 
 class App extends Component {
 constructor() {
@@ -41,13 +42,9 @@ this.setState(() => {
     });
   return (
     <div className="App">
-<input className='search-box' 
-type='search' 
-placeholder='search monsters' 
-onChange={onSearchChange}
-/>
 
 
+<SearchBox className='monster-search-box' placeholder='search monsters' onChangeHandler={onSearchChange}/>
 
 <CardList monsters={filteredMonsters}/>
   
